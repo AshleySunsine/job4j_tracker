@@ -11,4 +11,12 @@ public class Doctor extends Profession {
     public int getExpirience() {
 
     }
+
+    public void setCategory(int category) {
+        this.category = category;
+    }
+
+    public void setExpirience(int expirience) {
+        this.expirience = expirience;
+    }
 }
