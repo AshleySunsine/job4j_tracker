@@ -7,9 +7,9 @@ public class Programmer extends Engineer {
         super.setBirthday("12.12.2003");
         super.setEducation("Hight");
         super.setMainEngineer(true);
-
     }
-    public String getLang() {
 
+    public String getLang() {
+        return "Nul;";
     }
 }

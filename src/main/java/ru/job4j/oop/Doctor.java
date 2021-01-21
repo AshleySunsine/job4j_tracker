@@ -5,11 +5,11 @@ public class Doctor extends Profession {
     private int expirience;
 
     public int getCategory() {
-
+    return -1;
     }
 
     public int getExpirience() {
-
+    return -1;
     }
 
     public void setCategory(int category) {

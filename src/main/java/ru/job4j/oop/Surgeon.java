@@ -11,6 +11,6 @@ public class Surgeon extends Doctor {
     }
 
     public int getQuantityOperation() {
-
+    return -1;
     }
 }

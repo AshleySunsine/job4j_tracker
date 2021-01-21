@@ -5,11 +5,11 @@ public class Engineer extends Profession {
     private boolean isMainEngineer;
 
     public int getlevel() {
-
+    return -1;
     }
 
     public boolean getIsMainEngineer() {
-
+    return false;
     }
 
     public void setLevel(int level) {

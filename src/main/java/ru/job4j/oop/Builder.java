@@ -1,6 +1,6 @@
 package ru.job4j.oop;
 
-public class Builder extends Engineer{
+public class Builder extends Engineer {
     private String typeBuld;
 
     public Builder() {
@@ -9,7 +9,8 @@ public class Builder extends Engineer{
         super.setSurname("Liaho");
         super.setEducation("Hight");
     }
-    public String getTypeBuld() {
 
+    public String getTypeBuld() {
+    return "null";
     }
 }

@@ -7,16 +7,19 @@ public class Profession {
     private String birthday;
 
     public String getName() {
-
+    return "Null";
     }
+
     public String getSurname() {
-
+        return "Null";
     }
+
     public String getEducation() {
-
+        return "Null";
     }
-    public String getBirthday() {
 
+    public String getBirthday() {
+        return "Null";
     }
 
     public void setName(String name) {
