@@ -14,7 +14,7 @@ public class Tracker {
     }
 
     public Item[] findAll() {
-        int length = 0;
+        /*int length = 0;
         Item[] returnItem = new Item[items.length];
         for (Item item : items) {
           if (item != null) {
@@ -22,7 +22,8 @@ public class Tracker {
               length++;
           }
         }
-        return Arrays.copyOf(returnItem, length);
+        return Arrays.copyOf(returnItem, length);*/
+        return Arrays.copyOf(items, size);
     }
 
     public Item[] findByName(String name) {
