@@ -9,6 +9,14 @@ public class Item {
     private String name;
     private LocalDateTime created = LocalDateTime.now();
 
+    public Item(String name) {
+        this.name = name;
+    }
+
+    public Item() {
+        this.name = "Default name";
+    }
+
     public int getId() {
         return this.id;
     }
