@@ -14,33 +14,27 @@ public class StartUI {
     public static void replaceItem(Input input, Tracker tracker) {
         System.out.println("\n=== Edit Item ====");
         int idChange = input.askInt("Введите id заявки, которую мы будем изменять:");
-        if (tracker.findById(idChange) != null) {
             Item newItem = new Item();
-            newItem.setName(
-                    input.askStr("Введите имя заявки на которую мы будем заменять:")
-            );
             if (tracker.replace(idChange, newItem)) {
+                newItem.setName(
+                        input.askStr("Введите имя заявки на которую мы будем заменять:")
+                );
                 System.out.println("Замена прошла удачно.");
             } else {
-                System.out.println("Неудачно. Замена не выполнена.");
+                System.out.println("Неудачно. Удаление не выполнено.");
+                System.out.println("Элемента с id=" + idChange + " не существует.");
             }
-        } else {
-            System.out.println("Элемента с id= " + idChange + " не существует.");
         }
-    }
 
     public static void deleteItem(Input input, Tracker tracker) {
         System.out.println("\n=== Delete Item ====");
         int idDelete = input.askInt("Введите id заявки, которую мы будем удалять:");
-        if (tracker.findById(idDelete) != null) {
             if (tracker.delete(idDelete)) {
                 System.out.println("Удаление прошло успешно.");
             } else {
                 System.out.println("Неудачно. Удаление не выполнено.");
+                System.out.println("Элемента с id=" + idDelete + " не существует.");
             }
-        } else {
-            System.out.println("Элемента с id= " + idDelete + " не существует.");
-        }
     }
 
     public static void showItem(Input input, Tracker tracker) {
