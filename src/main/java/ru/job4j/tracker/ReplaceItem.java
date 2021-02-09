@@ -1,6 +1,12 @@
 package ru.job4j.tracker;
 
 public class ReplaceItem implements UserAction {
+    private final Output out;
+
+    public ReplaceItem(Output out) {
+        this.out = out;
+    }
+
     public String name() {
         return "=== Edit Item ====";
     }
@@ -13,10 +19,10 @@ public class ReplaceItem implements UserAction {
             newItem.setName(
                     input.askStr("Введите имя заявки на которую мы будем заменять:")
             );
-            System.out.println("Замена прошла удачно.");
+            out.println("Замена прошла удачно.");
         } else {
-            System.out.println("Неудачно. Удаление не выполнено.");
-            System.out.println("Элемента с id=" + idChange + " не существует.");
+            out.println("Неудачно. Удаление не выполнено.");
+            out.println("Элемента с id=" + idChange + " не существует.");
         }
         return true;
     }
