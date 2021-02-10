@@ -45,7 +45,7 @@ public class StartUITest {
         Tracker tracker = new Tracker();
         UserAction[] actions = {
                 new CreateAction(out),
-                new ReplaceItem(out), new Exit(out),
+                new ReplaceItem(out), new Exit(out)
         };
         new StartUI(out).init(in, tracker, actions);
         assertThat(tracker.findAll()[0].getName(), is("FFFFFF"));
@@ -67,5 +67,7 @@ public class StartUITest {
                       + "Exit" + System.lineSeparator()
         ));
     }
+
+
 
 }
