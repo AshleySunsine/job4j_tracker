@@ -121,16 +121,16 @@ public class StartUITest {
     public void whenFindAll() {
         Output out = new StubOutput();
         Input in = new StubInput(
-                new String[] {"0", "Item name"}
+                new String[] {"0", "Item name", "1"}
         );
         Tracker tracker = new Tracker();
         UserAction[] actions = {
                 new CreateAction(out),
-                new ShowItem(out), new Exit(out),
+                new ShowItem(out)
         };
         new StartUI(out).init(in, tracker, actions);
         assertThat(out.toString(), is(
-                "\nMenu."
+                "Item{id = 1, name = 'Item name'}"
         ));
     }
 
