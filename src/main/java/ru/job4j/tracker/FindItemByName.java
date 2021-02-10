@@ -19,7 +19,7 @@ public class FindItemByName implements UserAction {
         );
         if (searchedItem.length > 0) {
             for (Item i : searchedItem) {
-                System.out.println(i.toString());
+                out.println(i.toString());
             }
         } else {
             out.println("Заявки с таким именем не найдены");
