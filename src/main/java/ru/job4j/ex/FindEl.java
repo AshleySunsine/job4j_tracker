@@ -10,7 +10,7 @@ public class FindEl {
             }
         }
         if (rsl == (-1)) {
-            throw new ElementNotFoundException();
+            throw new ElementNotFoundException("Заглушка");
         }
         return rsl;
     }
