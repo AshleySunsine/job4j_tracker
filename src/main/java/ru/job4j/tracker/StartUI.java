@@ -14,7 +14,7 @@ public class StartUI {
         while (run) {
             this.showMenu(actions);
             int select = input.askInt("Действие: ");
-            if ((select < 0) || (select >= actions.length)) {
+            if (select >= actions.length) {
                 out.println("Wrong input, you can select: 0 .. " + (actions.length - 1));
                 continue;
             }
