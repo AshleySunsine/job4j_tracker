@@ -2,8 +2,6 @@ package ru.job4j.tracker;
 
 import org.junit.Test;
 
-import java.security.cert.X509Certificate;
-
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
 
@@ -15,7 +13,7 @@ public class StartUITest {
         Input in = new StubInput(
                 new String[] {"0", "Item name", "1"}
         );
-        Tracker tracker = new Tracker();
+        Tracker tracker = Tracker.getTracker();
         UserAction[] actions = {
                 new CreateAction(out),
                 new Exit(out)
@@ -30,7 +28,7 @@ public class StartUITest {
         Input in = new StubInput(
                 new String[] {"0", "Item name", "1", "1", "2"}
         );
-        Tracker tracker = new Tracker();
+        Tracker tracker = Tracker.getTracker();
         UserAction[] actions = {
                 new CreateAction(out),
                  new DeleteItem(out), new Exit(out),
@@ -45,7 +43,7 @@ public class StartUITest {
         Input in = new StubInput(
                 new String[] {"0", "Item name", "1", "1", "FFFFFF", "2"}
         );
-        Tracker tracker = new Tracker();
+        Tracker tracker = Tracker.getTracker();
         UserAction[] actions = {
                 new CreateAction(out),
                 new ReplaceItem(out), new Exit(out)
@@ -60,7 +58,7 @@ public class StartUITest {
         Input in = new StubInput(
                 new String[]{"0"}
         );
-        Tracker tracker = new Tracker();
+        Tracker tracker = Tracker.getTracker();
         UserAction[] actions = {
                 new Exit(out)
         };
@@ -77,7 +75,7 @@ public class StartUITest {
         Input in = new StubInput(
                 new String[] {"0", "Item name", "1", "Item name", "2"}
         );
-        Tracker tracker = new Tracker();
+        Tracker tracker = Tracker.getTracker();
         UserAction[] actions = {
                 new CreateAction(out),
                 new FindItemByName(out), new Exit(out),
@@ -100,7 +98,7 @@ public class StartUITest {
         Input in = new StubInput(
                 new String[] {"0", "Item name", "1", "1", "2"}
         );
-        Tracker tracker = new Tracker();
+        Tracker tracker = Tracker.getTracker();
         UserAction[] actions = {
                 new CreateAction(out),
                 new FindItemById(out), new Exit(out),
@@ -123,7 +121,7 @@ public class StartUITest {
         Input in = new StubInput(
                 new String[] {"0", "Item name", "1", "2"}
         );
-        Tracker tracker = new Tracker();
+        Tracker tracker = Tracker.getTracker();
         UserAction[] actions = {
                 new CreateAction(out),
                 new ShowItem(out), new Exit(out)
@@ -144,7 +142,7 @@ public class StartUITest {
         Input input = new StubInput(
                 new String[] {"45", "0"}
         );
-        Tracker tracker = new Tracker();
+        Tracker tracker = Tracker.getTracker();
         UserAction[] actions = {
                 new Exit(out)
         };
