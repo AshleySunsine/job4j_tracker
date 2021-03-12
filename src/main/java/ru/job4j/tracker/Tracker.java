@@ -6,13 +6,8 @@ import java.util.ArrayList;
 
 public final class Tracker {
     private static Tracker instance = null;
-    //private final Item[] items = new Item[100];
     private  List<Item> items = new ArrayList<>();
     private int ids = 1;
-    private int size = 0;
-
-    private Tracker() {
-    }
 
     public static Tracker getTracker() {
         if (instance == null) {
@@ -42,23 +37,20 @@ public final class Tracker {
     }
 
     public Item findById(int id) {
-        for (Item it : items) {
-            if (it.getId() == id) {
-               return it;
-            }
-        }
-        return null;
+        int index = indexOf(id);
+        return index != -1 ? items.get(index) : null;
     }
 
     private int indexOf(int id) {
         int rsl = -1;
-        for (Item it : items) {
+        for (int index = 0; index < items.size(); index++) {
             rsl++;
-            if (it.getId() == id) {
-                return rsl;
+            if (items.get(index).getId() == id) {
+                rsl = index;
+                break;
             }
         }
-        return -1;
+        return rsl;
     }
 
     public boolean replace(int id, Item item) {
